@@ -41,3 +41,9 @@ document.addEventListener('keydown', listenForUpDownArrow)
 // function as expected. There are many ways to accomplish this task, but you will need
 // to at minimum add listeners to each link and toggle the display of the tab contents.
 // Hint: display: none; hides an element, and display: block; will bring it
+function tabClick() {
+    
+}
+function asTabs(node) {
+    
+}
