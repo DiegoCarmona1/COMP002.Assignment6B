@@ -26,7 +26,10 @@ function listenForUpDownArrow(x) {
         changeFontSizeOfElement(balloon, -0.1);
         x.preventDefault();
     }
-    
+    if (fontSize > 50) {
+        balloon.textContent = '💥';
+        document.removeEventListener('keydown', listenForUpDownArrow);
+    }
 }
 changeFontSizeOfElement(balloon, 0)
 document.addEventListener('keydown', listenForUpDownArrow)
