@@ -15,10 +15,19 @@ const balloon = getElementById("balloon")
 let fontSize = 16
 let fontUnit = 'px'
 function changeFontSizeOfElement(element, shift) {
-    fontSize += fontSize * percentage;
+    fontSize += fontSize * shift;
     element.style.fontSize = fontSize + fontUnit;
 }
-
+function listenForUpDownArrow(x) {
+    if (x.key == 'ArrowUp') {
+        changeFontSizeOfElement(balloon, 0.1);
+        x.preventDefault();
+    } else if (x.key == 'ArrowDown'){
+        changeFontSizeOfElement(balloon, -0.1);
+        x.preventDefault();
+    }
+    
+}
 // 2. The index.html page has a tabbed layout. Make the default state of the layout show
 // the first tab, and make it so that when you click the links at the top the correct
 // tab's contents are displayed and the others are hidden. Prevent the default action of
