@@ -30,6 +30,7 @@ function listenForUpDownArrow(x) {
 }
 changeFontSizeOfElement(balloon, 0)
 document.addEventListener('keydown', listenForUpDownArrow)
+// success!
 // 2. The index.html page has a tabbed layout. Make the default state of the layout show
 // the first tab, and make it so that when you click the links at the top the correct
 // tab's contents are displayed and the others are hidden. Prevent the default action of
